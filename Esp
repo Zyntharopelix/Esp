@@ -1,7 +1,3 @@
-
-
-
-
 local Esp = {}
 local ThreeDrawingLibrary = loadstring(game:HttpGet("https://raw.githubusercontent.com/CongoOhioDog/PerfectCorn/refs/heads/main/3D"))()
 local RunService = game:GetService("RunService")
@@ -582,5 +578,5 @@ end
         end
     end)
 end
-
+return ESP
 
