@@ -4,7 +4,7 @@ local RunService = game:GetService("RunService")
 local Client = game:GetService("Players").LocalPlayer
 
 
-function Esp:Esp(v)
+function Esp:Esp(v, TargetPlr)
     local bones = {
         {"Head", "UpperTorso"},
         {"UpperTorso", "RightUpperArm"},
@@ -74,7 +74,7 @@ function Esp:Esp(v)
                 local HeadPosition = game:GetService("Workspace").CurrentCamera:worldToViewportPoint(Head.Position + Vector3.new(0, 1.3, 0))
                 local LegPosition = game:GetService("Workspace").CurrentCamera:worldToViewportPoint(RootPart.Position - Vector3.new(0, 3.6, 0))
 
-                if not Dickinson_esp.misc.target or v == TargetPlr and TargetPlr.Character then
+                if not Dickinson_esp.misc.target or v == TargetPlr
                     if Dickinson_esp.box.boxes and Dickinson_esp.enabled then
                         if Dickinson_esp.box.boxtype == "2D" then
                             local height = HeadPosition.Y - LegPosition.Y
